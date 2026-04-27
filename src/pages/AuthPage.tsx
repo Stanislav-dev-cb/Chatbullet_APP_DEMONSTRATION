@@ -96,7 +96,7 @@ export function AuthPage() {
 
   return (
     <div
-      className="relative min-h-dvh w-full flex flex-col bg-[#faf8f5] text-[#231f20]"
+      className="relative min-h-dvh w-full flex flex-col bg-white text-[#1a1d21]"
       style={{
         paddingTop: 'env(safe-area-inset-top, 0px)',
         paddingBottom: 'env(safe-area-inset-bottom, 0px)',
@@ -109,7 +109,7 @@ export function AuthPage() {
         aria-hidden
         style={{
           background:
-            'linear-gradient(165deg, rgba(240,141,82,0.22) 0%, rgba(0,198,198,0.14) 42%, rgba(250,248,245,0.92) 78%, #faf8f5 100%)',
+            'linear-gradient(165deg, rgba(102,191,255,0.14) 0%, rgba(232,246,255,0.9) 45%, #f6f9fc 78%, #ffffff 100%)',
         }}
       />
 
@@ -118,11 +118,11 @@ export function AuthPage() {
           <div className="relative w-full">
             <div className="absolute bottom-full left-0 right-0 z-20 mb-5 flex flex-col items-center">
               <img
-                src="/logo1.svg"
-                alt="Lavasta Factory — логотип"
-                className="h-auto w-[min(100%,200px)] shrink-0 object-contain"
-                width={200}
-                height={81}
+                src="/logo-chatbullet.png"
+                alt="ChatBullet — логотип"
+                className="h-auto w-[min(100%,280px)] shrink-0 object-contain"
+                width={280}
+                height={90}
               />
             </div>
 
@@ -130,11 +130,12 @@ export function AuthPage() {
               shadow="sm"
               p={{ base: 'lg', xs: 'xl' }}
               radius="lg"
-              className="w-full border border-[#ebe6e0] bg-white/90 backdrop-blur-sm"
+              className="w-full border border-slate-200/90 bg-white shadow-[0_8px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm"
             >
               <Title
                 order={1}
-                className="text-[#231f20] mb-1 text-center text-xl font-bold leading-snug tracking-tight"
+                className="text-[#1a1d21] mb-1 text-center text-xl font-bold leading-snug tracking-tight"
+                style={{ fontFamily: '"Montserrat", "Roboto", sans-serif' }}
               >
                 Вхід
               </Title>
@@ -152,13 +153,13 @@ export function AuthPage() {
                     setPhone(formatUaPhoneInput(e.currentTarget.value));
                     setError(null);
                   }}
-                  leftSection={<IconPhone size={18} className="text-[#f08d52]" />}
+                  leftSection={<IconPhone size={18} className="text-[#66BFFF]" />}
                   error={error}
                   size="md"
                   classNames={{
-                    label: 'text-[#231f20] font-medium text-sm mb-1.5',
+                    label: 'text-[#1a1d21] font-medium text-sm mb-1.5',
                     input:
-                      'min-h-12 text-base rounded-lg border-[#e3ddd4] bg-[#fdfcfa] focus:border-[#f08d52] data-[error]:border-red-400',
+                      'min-h-12 text-base rounded-lg border-slate-200 bg-white focus:border-[#66BFFF] data-[error]:border-red-400',
                   }}
                 />
 
@@ -170,8 +171,8 @@ export function AuthPage() {
                   className="min-h-12 text-base font-semibold rounded-lg border-0 shadow-md"
                   styles={{
                     root: {
-                      background: 'linear-gradient(135deg, #f08d52 0%, #e67a3d 100%)',
-                      boxShadow: '0 8px 24px rgba(240, 141, 82, 0.35)',
+                      background: 'linear-gradient(135deg, #8ED4FF 0%, #66BFFF 50%, #4AA3E8 100%)',
+                      boxShadow: '0 8px 28px rgba(102, 191, 255, 0.45)',
                     },
                   }}
                 >

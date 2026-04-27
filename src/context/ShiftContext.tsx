@@ -19,7 +19,7 @@ export type StoredShift = {
   endAdminStatus: AdminStatus | null;
 };
 
-const LS_PREFIX = 'lavasta_shift_v1:';
+const LS_PREFIX = 'chatbullet_shift_v1:';
 
 function todayKey(): string {
   return new Date().toISOString().slice(0, 10);

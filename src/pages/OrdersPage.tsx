@@ -21,7 +21,7 @@ import {
 
 const ink = '#1a1816';
 const thread = '#2c2a28';
-const orange = '#fe8842';
+const brand = '#66BFFF';
 const muted = '#6b6560';
 
 type DurationKind = 'nominal' | 'individual';
@@ -63,7 +63,7 @@ const MOCK_ORDERS: MockOrder[] = [
     id: 'o1',
     number: 'LV-2026-1842',
     label: 'Тотал-блек · PP',
-    tzUrl: 'https://lavastafactory.com',
+    tzUrl: 'https://chatbullet.com',
     opSeed: 1,
     model: 'Shopper S',
     size: '38×32 см',
@@ -74,7 +74,7 @@ const MOCK_ORDERS: MockOrder[] = [
     id: 'o2',
     number: 'LV-2026-1903',
     label: 'Еко-ллян крем',
-    tzUrl: 'https://lavastafactory.com',
+    tzUrl: 'https://chatbullet.com',
     opSeed: 2,
     model: 'Tote M',
     size: '42×38 см',
@@ -85,7 +85,7 @@ const MOCK_ORDERS: MockOrder[] = [
     id: 'o3',
     number: 'LV-2026-2011',
     label: 'Промо-набір 500 шт',
-    tzUrl: 'https://lavastafactory.com',
+    tzUrl: 'https://chatbullet.com',
     opSeed: 3,
     model: 'Крос-боді L',
     size: '36×40 см',
@@ -96,7 +96,7 @@ const MOCK_ORDERS: MockOrder[] = [
     id: 'o4',
     number: 'LV-2025-9781',
     label: 'Повтор клієнта · Navy',
-    tzUrl: 'https://lavastafactory.com',
+    tzUrl: 'https://chatbullet.com',
     opSeed: 4,
     model: 'Backpack',
     size: '44×28×12 см',
@@ -178,7 +178,7 @@ function GhostButton({
     <button
       type="button"
       className={[
-        'rounded-xl border border-[#c4b5a4] bg-white/80 px-4 py-2.5 text-sm font-semibold text-[#4a4440] transition hover:border-[#fe8842]/50 hover:bg-white',
+        'rounded-xl border border-[#c4b5a4] bg-white/80 px-4 py-2.5 text-sm font-semibold text-[#4a4440] transition hover:border-[#66BFFF]/50 hover:bg-white',
         className,
       ]
         .filter(Boolean)
@@ -262,7 +262,7 @@ export function OrdersPage() {
 
   return (
     <div
-      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#231f20]"
+      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#1a1d21]"
       style={{
         fontFamily: '"Roboto", system-ui, sans-serif',
         paddingTop: 'env(safe-area-inset-top, 0px)',
@@ -270,9 +270,9 @@ export function OrdersPage() {
         paddingLeft: 'env(safe-area-inset-left, 0px)',
         paddingRight: 'env(safe-area-inset-right, 0px)',
         background: `
-          radial-gradient(ellipse 100% 70% at 50% -15%, rgba(254, 136, 66, 0.22) 0%, transparent 52%),
-          radial-gradient(ellipse 50% 45% at 100% 100%, rgba(0, 160, 170, 0.12) 0%, transparent 55%),
-          #f2ebe3`,
+          radial-gradient(ellipse 100% 70% at 50% -15%, rgba(102, 191, 255, 0.18) 0%, transparent 52%),
+          radial-gradient(ellipse 50% 45% at 100% 100%, rgba(142, 212, 255, 0.1) 0%, transparent 55%),
+          #f6f9fc`,
       }}
     >
       <div
@@ -283,14 +283,14 @@ export function OrdersPage() {
         }}
         aria-hidden
       />
-      <div className="orders-aurora pointer-events-none absolute left-[5%] top-20 h-52 w-52 rounded-full bg-[#fe8842]/22 blur-3xl" />
+      <div className="orders-aurora pointer-events-none absolute left-[5%] top-20 h-52 w-52 rounded-full bg-[#66BFFF]/22 blur-3xl" />
       <div className="orders-aurora pointer-events-none absolute right-[8%] top-1/3 h-40 w-40 rounded-full bg-cyan-500/15 blur-3xl [animation-delay:1.4s]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-md flex-1 flex-col px-4 pb-12 pt-4 sm:px-6">
         <header className="mb-5 flex items-start gap-2">
           <Link
             to="/"
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#fe8842]/50 hover:text-[#231f20]"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#66BFFF]/50 hover:text-[#231f20]"
             aria-label="Назад до кабінету"
           >
             <IconArrowLeft size={20} stroke={1.75} />
@@ -304,8 +304,8 @@ export function OrdersPage() {
             </h1>
             <p className="text-xs font-medium text-[#6b6560]">
               {isTechnologist
-                ? 'Lavasta Factory · редагування тех. карти'
-                : 'Lavasta Factory · маршрут і виконання операцій'}
+                ? 'ChatBullet · редагування тех. карти'
+                : 'ChatBullet · маршрут і виконання операцій'}
             </p>
           </div>
         </header>
@@ -319,7 +319,7 @@ export function OrdersPage() {
           <button
             type="button"
             onClick={clearSelection}
-            className="mb-4 w-full rounded-xl border border-dashed border-[#c4b5a4]/80 bg-white/50 py-2 text-xs font-semibold text-[#5c5652] transition hover:border-[#fe8842]/40 hover:bg-white/80 hover:text-[#231f20]"
+            className="mb-4 w-full rounded-xl border border-dashed border-[#c4b5a4]/80 bg-white/50 py-2 text-xs font-semibold text-[#5c5652] transition hover:border-[#66BFFF]/40 hover:bg-white/80 hover:text-[#231f20]"
           >
             Показати всі картки списку
           </button>
@@ -425,15 +425,15 @@ export function OrdersPage() {
           inset: 0;
           border-radius: 1.25rem;
           padding: 1px;
-          background: linear-gradient(130deg, rgba(254, 136, 66, 0.5), rgba(0, 180, 190, 0.22), rgba(255, 255, 255, 0.3));
+          background: linear-gradient(130deg, rgba(102, 191, 255, 0.4), rgba(142, 212, 255, 0.15), rgba(255, 255, 255, 0.35));
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           pointer-events: none;
         }
         .orders-btn-primary {
-          background: linear-gradient(135deg, #ff9a5c 0%, #fe8842 40%, #e86b2a 100%);
-          box-shadow: 0 8px 28px rgba(254, 136, 66, 0.38);
+          background: linear-gradient(135deg, #8ED4FF 0%, #66BFFF 40%, #4AA3E8 100%);
+          box-shadow: 0 8px 28px rgba(102, 191, 255, 0.34);
         }
         .orders-btn-primary:hover:not(:disabled) { filter: brightness(1.05); }
         .orders-fade-in { animation: orders-in 0.45s ease both; }
@@ -486,12 +486,12 @@ function WorkerOrderCard({
     <div
       className={[
         'orders-fade-in relative overflow-hidden rounded-2xl',
-        active ? 'orders-glass ring-1 ring-[#fe8842]/30' : 'border border-[#e8e0d6] bg-white/80 shadow-[0_4px_24px_rgba(26,24,22,0.07)] backdrop-blur-md',
+        active ? 'orders-glass ring-1 ring-[#66BFFF]/30' : 'border border-[#e8e0d6] bg-white/80 shadow-[0_4px_24px_rgba(26,24,22,0.07)] backdrop-blur-md',
       ].join(' ')}
     >
       <div
         className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full opacity-30"
-        style={{ background: `radial-gradient(circle, ${orange} 0%, transparent 72%)` }}
+        style={{ background: `radial-gradient(circle, ${brand} 0%, transparent 72%)` }}
         aria-hidden
       />
       <div className="relative flex flex-col gap-2 p-4 sm:p-4">
@@ -509,8 +509,8 @@ function WorkerOrderCard({
           <div
             className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-white shadow-md"
             style={{
-              background: 'linear-gradient(135deg, #ff9a5c 0%, #fe8842 50%, #e86b2a 100%)',
-              boxShadow: '0 10px 32px rgba(254, 136, 66, 0.35)',
+              background: 'linear-gradient(135deg, #8ED4FF 0%, #66BFFF 50%, #4AA3E8 100%)',
+              boxShadow: '0 10px 32px rgba(102, 191, 255, 0.33)',
             }}
           >
             <IconPackage size={24} stroke={1.4} />
@@ -531,7 +531,7 @@ function WorkerOrderCard({
               target="_blank"
               rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-1 rounded-lg border border-[#fe8842]/35 bg-gradient-to-b from-white to-[#fff8f3] px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#c24d12] shadow-sm transition hover:border-[#fe8842] hover:shadow"
+              className="inline-flex items-center gap-1 rounded-lg border border-[#66BFFF]/35 bg-gradient-to-b from-white to-sky-50/90 px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-sky-800 shadow-sm transition hover:border-[#66BFFF] hover:shadow"
             >
               ТЗ
               <IconExternalLink size={14} stroke={2} className="opacity-80" />
@@ -551,9 +551,9 @@ function WorkerOrderCard({
         {showOps && (
           <div className="orders-ops border-t border-dashed border-[#c4b5a4]/60 pt-3">
             <div className="mb-2 flex items-center gap-2 px-0.5">
-              <IconNeedle size={16} className="text-[#fe8842]" />
+              <IconNeedle size={16} className="text-[#66BFFF]" />
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b6560]">Операції</p>
-              <div className="h-px flex-1 bg-gradient-to-r from-[#fe8842]/40 to-transparent" />
+              <div className="h-px flex-1 bg-gradient-to-r from-[#66BFFF]/40 to-transparent" />
             </div>
             <ul className="m-0 max-h-[min(60vh,520px)] list-none space-y-1.5 overflow-y-auto overscroll-contain p-0 pr-0.5">
               {operations.map((op, idx) => {
@@ -568,7 +568,7 @@ function WorkerOrderCard({
                       className={[
                         'orders-op-row rounded-xl border px-2.5 py-2',
                         panel
-                          ? 'border-[#fe8842]/45 bg-gradient-to-r from-amber-50/95 to-white shadow-[0_4px_20px_rgba(254,136,66,0.12)]'
+                          ? 'border-[#66BFFF]/45 bg-gradient-to-r from-sky-50/95 to-white shadow-[0_4px_20px_rgba(102,191,255,0.12)]'
                           : 'border-[#e8e0d6]/80 bg-white/50',
                       ].join(' ')}
                     >
@@ -583,7 +583,7 @@ function WorkerOrderCard({
                           </span>
                           <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-[#6b6560]">
                             <span className="inline-flex items-center gap-1">
-                              <IconSparkles size={12} className="shrink-0 text-[#fe8842]/80" />
+                              <IconSparkles size={12} className="shrink-0 text-[#66BFFF]/80" />
                               <span className="font-medium text-[#4a4440]">{durationLabel[op.durationKind]}</span>
                             </span>
                             <span className="text-[#8a8580]">·</span>
@@ -617,7 +617,7 @@ function WorkerOrderCard({
                               onChange={(e) => onDraftChange(k, e.currentTarget.value)}
                               onBlur={() => onDraftCommit(k)}
                               placeholder="0"
-                              className="w-full min-w-0 flex-1 rounded-xl border border-[#d8ccc0] bg-white px-3 py-2.5 text-center text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#fe8842] focus:ring-2 focus:ring-[#fe8842]/20"
+                              className="w-full min-w-0 flex-1 rounded-xl border border-[#d8ccc0] bg-white px-3 py-2.5 text-center text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#66BFFF] focus:ring-2 focus:ring-[#66BFFF]/20"
                             />
                             <PrimaryButton
                               onClick={() => onDraftCommit(k)}
@@ -666,12 +666,12 @@ function TechnologistOrderCard({
     <div
       className={[
         'orders-fade-in relative overflow-hidden rounded-2xl',
-        active ? 'orders-glass ring-1 ring-[#fe8842]/30' : 'border border-[#e8e0d6] bg-white/80 shadow-[0_4px_24px_rgba(26,24,22,0.07)] backdrop-blur-md',
+        active ? 'orders-glass ring-1 ring-[#66BFFF]/30' : 'border border-[#e8e0d6] bg-white/80 shadow-[0_4px_24px_rgba(26,24,22,0.07)] backdrop-blur-md',
       ].join(' ')}
     >
       <div
         className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full opacity-30"
-        style={{ background: `radial-gradient(circle, ${orange} 0%, transparent 72%)` }}
+        style={{ background: `radial-gradient(circle, ${brand} 0%, transparent 72%)` }}
         aria-hidden
       />
       <div className="relative flex flex-col gap-2 p-4 sm:p-4">
@@ -689,8 +689,8 @@ function TechnologistOrderCard({
           <div
             className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-white shadow-md"
             style={{
-              background: 'linear-gradient(135deg, #ff9a5c 0%, #fe8842 50%, #e86b2a 100%)',
-              boxShadow: '0 10px 32px rgba(254, 136, 66, 0.35)',
+              background: 'linear-gradient(135deg, #8ED4FF 0%, #66BFFF 50%, #4AA3E8 100%)',
+              boxShadow: '0 10px 32px rgba(102, 191, 255, 0.33)',
             }}
           >
             <IconPackage size={24} stroke={1.4} />
@@ -713,7 +713,7 @@ function TechnologistOrderCard({
                 <p className="mt-0.5 font-semibold text-[#231f20]">{order.size}</p>
               </div>
               <div className="sm:col-span-2">
-                <div className="rounded-lg border border-[#fe8842]/25 bg-gradient-to-r from-amber-50/80 to-white/60 px-2.5 py-1.5">
+                <div className="rounded-lg border border-[#66BFFF]/25 bg-gradient-to-r from-sky-50/85 to-white/60 px-2.5 py-1.5">
                   <p className="text-[9px] font-bold uppercase tracking-wider text-[#b3541b]">Кількість моделей</p>
                   <p className="mt-0.5 text-sm font-bold tabular-nums text-[#1a1816]">{order.modelQty} од.</p>
                 </div>
@@ -726,7 +726,7 @@ function TechnologistOrderCard({
               target="_blank"
               rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-1 rounded-lg border border-[#fe8842]/35 bg-gradient-to-b from-white to-[#fff8f3] px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#c24d12] shadow-sm transition hover:border-[#fe8842] hover:shadow"
+              className="inline-flex items-center gap-1 rounded-lg border border-[#66BFFF]/35 bg-gradient-to-b from-white to-sky-50/90 px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-wide text-sky-800 shadow-sm transition hover:border-[#66BFFF] hover:shadow"
             >
               ТЗ
               <IconExternalLink size={14} stroke={2} className="opacity-80" />
@@ -747,7 +747,7 @@ function TechnologistOrderCard({
           <div className="border-t border-dashed border-[#c4b5a4]/60 pt-3">
             <div className="mb-2 flex items-center justify-between gap-2 px-0.5">
               <div className="flex min-w-0 items-center gap-2">
-                <IconNeedle size={16} className="shrink-0 text-[#fe8842]" />
+                <IconNeedle size={16} className="shrink-0 text-[#66BFFF]" />
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b6560]">Операції (тех. карта)</p>
               </div>
               <button
@@ -756,7 +756,7 @@ function TechnologistOrderCard({
                   e.stopPropagation();
                   onAdd();
                 }}
-                className="inline-flex items-center gap-1 rounded-lg border border-[#fe8842]/40 bg-white/90 px-2.5 py-1.5 text-[11px] font-bold text-[#c24d12] shadow-sm transition hover:bg-[#fff8f3]"
+                className="inline-flex items-center gap-1 rounded-lg border border-[#66BFFF]/40 bg-white/90 px-2.5 py-1.5 text-[11px] font-bold text-sky-800 shadow-sm transition hover:bg-sky-50/90"
               >
                 <IconPlus size={15} stroke={2} />
                 Додати
@@ -773,7 +773,7 @@ function TechnologistOrderCard({
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-[13px] font-semibold leading-snug text-[#231f20]">{row.title}</span>
                         {row.pendingApproval && (
-                          <span className="inline-flex items-center rounded-full border border-amber-300/80 bg-amber-50/95 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-amber-900">
+                          <span className="inline-flex items-center rounded-full border border-sky-300/80 bg-sky-50/95 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-sky-900">
                             Не підтверджено
                           </span>
                         )}
@@ -810,7 +810,7 @@ function TechnologistOrderCard({
               <button
                 type="button"
                 onClick={onSelect}
-                className="mt-2 w-full rounded-xl border border-dashed border-[#c4b5a4] bg-white/40 py-2 text-center text-xs font-semibold text-[#5c5652] transition hover:border-[#fe8842]/45 hover:bg-white/70"
+                className="mt-2 w-full rounded-xl border border-dashed border-[#c4b5a4] bg-white/40 py-2 text-center text-xs font-semibold text-[#5c5652] transition hover:border-[#66BFFF]/45 hover:bg-white/70"
               >
                 Закріпити зверху, щоб додавати / видаляти операції
               </button>
@@ -899,9 +899,9 @@ function AddOperationWizard({
                       setDepartment(d);
                       setStep('op');
                     }}
-                    className="flex w-full items-start gap-3 rounded-2xl border border-[#e8e0d6] bg-white/90 p-3 text-left shadow-sm transition hover:border-[#fe8842]/45 hover:shadow-md"
+                    className="flex w-full items-start gap-3 rounded-2xl border border-[#e8e0d6] bg-white/90 p-3 text-left shadow-sm transition hover:border-[#66BFFF]/45 hover:shadow-md"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#fe8842]/12 text-[#fe8842]">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#66BFFF]/12 text-[#66BFFF]">
                       <IconBuilding size={22} stroke={1.5} />
                     </span>
                     <span className="min-w-0">
@@ -932,10 +932,10 @@ function AddOperationWizard({
                         setOperationTitle(t);
                         setStep('qty');
                       }}
-                      className="flex w-full items-center justify-between gap-2 rounded-xl border border-[#e8e0d6] bg-white/90 px-3 py-2.5 text-left text-sm font-medium text-[#231f20] transition hover:border-[#fe8842]/45"
+                      className="flex w-full items-center justify-between gap-2 rounded-xl border border-[#e8e0d6] bg-white/90 px-3 py-2.5 text-left text-sm font-medium text-[#231f20] transition hover:border-[#66BFFF]/45"
                     >
                       <span className="min-w-0 leading-snug">{t}</span>
-                      <span className="shrink-0 text-xs font-bold tabular-nums text-[#fe8842]">{sec} с</span>
+                      <span className="shrink-0 text-xs font-bold tabular-nums text-[#66BFFF]">{sec} с</span>
                     </button>
                   </li>
                 );
@@ -957,7 +957,7 @@ function AddOperationWizard({
               value={qty}
               onChange={(e) => setQty(e.currentTarget.value)}
               placeholder="Напр. 120"
-              className="w-full rounded-xl border border-[#d8ccc0] bg-white px-3 py-3 text-center text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#fe8842] focus:ring-2 focus:ring-[#fe8842]/20"
+              className="w-full rounded-xl border border-[#d8ccc0] bg-white px-3 py-3 text-center text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#66BFFF] focus:ring-2 focus:ring-[#66BFFF]/20"
             />
             <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
               <GhostButton className="sm:flex-1" onClick={() => setStep('op')}>
@@ -980,7 +980,7 @@ function AddOperationWizard({
               Якщо вам потрібно додати до операції індивідуальну кількість секунд, впишіть її в текстове поле, або
               натисніть кнопку «Пропустити».
             </p>
-            <div className="rounded-xl border border-[#fe8842]/25 bg-amber-50/80 px-3 py-2 text-sm">
+            <div className="rounded-xl border border-[#66BFFF]/25 bg-sky-50/85 px-3 py-2 text-sm">
               <span className="font-semibold text-[#5c4030]">Номінальна кількість секунд: </span>
               <span className="font-bold tabular-nums text-[#1a1816]">{nominal} с</span>
             </div>
@@ -994,7 +994,7 @@ function AddOperationWizard({
               value={customSeconds}
               onChange={(e) => setCustomSeconds(e.currentTarget.value)}
               placeholder="Залиште порожнім і натисніть «Пропустити»"
-              className="w-full rounded-xl border border-[#d8ccc0] bg-white px-3 py-2.5 text-center text-base font-semibold tabular-nums text-[#1a1816] outline-none focus:border-[#fe8842] focus:ring-2 focus:ring-[#fe8842]/20"
+              className="w-full rounded-xl border border-[#d8ccc0] bg-white px-3 py-2.5 text-center text-base font-semibold tabular-nums text-[#1a1816] outline-none focus:border-[#66BFFF] focus:ring-2 focus:ring-[#66BFFF]/20"
             />
             <div className="flex flex-col gap-2 sm:flex-row">
               <GhostButton

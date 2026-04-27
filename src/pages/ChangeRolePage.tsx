@@ -33,7 +33,7 @@ export function ChangeRolePage() {
         paddingLeft: 'env(safe-area-inset-left, 0px)',
         paddingRight: 'env(safe-area-inset-right, 0px)',
         background:
-          'radial-gradient(100% 50% at 50% 0%, rgba(254,136,66,0.15) 0%, transparent 55%),' +
+          'radial-gradient(100% 50% at 50% 0%, rgba(102,191,255,0.12) 0%, transparent 55%),' +
           'radial-gradient(80% 40% at 0% 100%, rgba(0, 170, 180, 0.1) 0%, transparent 50%),' +
           '#f7f2eb',
       }}
@@ -54,7 +54,7 @@ export function ChangeRolePage() {
         <header className="mb-6 flex items-center gap-2">
           <Link
             to="/"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#fe8842]/50 hover:text-[#231f20]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#66BFFF]/50 hover:text-[#231f20]"
             aria-label="Назад до кабінету"
           >
             <IconArrowLeft size={20} stroke={1.75} />
@@ -97,14 +97,14 @@ export function ChangeRolePage() {
                   className={[
                     'w-full rounded-2xl border p-3.5 text-left text-[15px] font-semibold transition-all',
                     isActive
-                      ? 'border-[#fe8842]/55 bg-white shadow-[0_4px_20px_rgba(254,136,66,0.2)]'
-                      : 'border-[#e8e0d6] bg-white/80 shadow-sm hover:-translate-y-0.5 hover:border-[#fe8842]/40 hover:shadow-md active:translate-y-0',
+                      ? 'border-[#66BFFF]/55 bg-white shadow-[0_4px_20px_rgba(102,191,255,0.18)]'
+                      : 'border-[#e8e0d6] bg-white/80 shadow-sm hover:-translate-y-0.5 hover:border-[#66BFFF]/40 hover:shadow-md active:translate-y-0',
                   ].join(' ')}
                   style={{ color: ink }}
                 >
                   {label}
                   {isActive && (
-                    <span className="ml-2 text-xs font-medium text-[#fe8842]">(поточна)</span>
+                    <span className="ml-2 text-xs font-medium text-[#66BFFF]">(поточна)</span>
                   )}
                 </button>
               </li>

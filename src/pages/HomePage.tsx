@@ -12,8 +12,8 @@ import { useAuth } from '../context/AuthContext';
 import { useShift } from '../context/ShiftContext';
 import { getMenuAccessForPhone, ROLE_LABEL_UK, type MenuKey } from '../auth/phoneRoles';
 
-const accent = '#fe8842';
-const accentSoft = 'rgba(254, 136, 66, 0.12)';
+const accent = '#66BFFF';
+const accentSoft = 'rgba(102, 191, 255, 0.14)';
 const ink = '#1a1816';
 const muted = '#6b6560';
 
@@ -71,8 +71,8 @@ export function HomePage() {
   );
 
   const runLabel =
-    'Lavasta Factory / якість · екологія · швацьке виробництво / ' +
-    'Lavasta Factory / якість · екологія · швацьке виробництво / ';
+    'ChatBullet / чат-боти для бізнесу / демо-кабінет / ' +
+    'ChatBullet / чат-боти для бізнесу / демо-кабінет / ';
 
   useEffect(() => {
     const st = location.state as HomeLocationState | null;
@@ -104,14 +104,15 @@ export function HomePage() {
 
   return (
     <div
-      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#231f20]"
+      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#1a1d21]"
       style={{
         fontFamily: '"Roboto", system-ui, sans-serif',
         paddingTop: 'env(safe-area-inset-top, 0px)',
         paddingBottom: 'env(safe-area-inset-bottom, 0px)',
         paddingLeft: 'env(safe-area-inset-left, 0px)',
         paddingRight: 'env(safe-area-inset-right, 0px)',
-        background: 'radial-gradient(120% 80% at 100% 0%, rgba(254,136,66,0.16) 0%, transparent 55%), radial-gradient(90% 60% at 0% 100%, rgba(0, 170, 180, 0.12) 0%, transparent 50%), #f7f2eb',
+        background:
+          'radial-gradient(120% 80% at 100% 0%, rgba(102,191,255,0.12) 0%, transparent 55%), radial-gradient(90% 60% at 0% 100%, rgba(142, 212, 255, 0.08) 0%, transparent 50%), #f6f9fc',
       }}
     >
       {/* тонка сітка, як на промо-сторінці */}
@@ -126,18 +127,18 @@ export function HomePage() {
         }}
       />
 
-      <div className="pointer-events-none absolute top-[12%] left-[-15%] h-[min(50vh,360px)] w-[70%] rounded-full blur-3xl opacity-30 bg-[#fe8842]/35" />
-      <div className="pointer-events-none absolute right-[-20%] bottom-[8%] h-[40vh] w-[60%] rounded-full blur-3xl opacity-25 bg-cyan-500/20" />
+      <div className="pointer-events-none absolute top-[12%] left-[-15%] h-[min(50vh,360px)] w-[70%] rounded-full blur-3xl opacity-35 bg-[#66BFFF]/25" />
+      <div className="pointer-events-none absolute right-[-20%] bottom-[8%] h-[40vh] w-[60%] rounded-full blur-3xl opacity-20 bg-sky-200/30" />
 
       <Box className="relative z-10 flex min-h-dvh w-full max-w-md mx-auto flex-col px-4 pb-8 pt-5 sm:px-6">
         {/* бігущий рядок у дусі лендінгу */}
         <div
-          className="-mx-4 sm:-mx-6 mb-5 overflow-hidden border-y border-black/6 bg-white/40 py-2.5 backdrop-blur-sm"
+          className="-mx-4 sm:-mx-6 mb-5 overflow-hidden border-y border-slate-200/60 bg-white/70 py-2.5 backdrop-blur-sm"
           style={{ transform: 'rotate(-1.2deg) scale(1.02)' }}
         >
           <div
-            className="home-marquee-track flex w-max gap-10 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.2em] text-[#1a1816]/75"
-            style={{ fontFamily: '"Roboto", sans-serif' }}
+            className="home-marquee-track flex w-max gap-10 whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-600"
+            style={{ fontFamily: '"Montserrat", "Roboto", sans-serif' }}
           >
             <span className="shrink-0 pl-1">{runLabel}</span>
             <span className="shrink-0" aria-hidden>
@@ -149,15 +150,15 @@ export function HomePage() {
         <header className="mb-6 flex items-start justify-between gap-3">
           <div className="min-w-0">
             <img
-              src="/logo1.svg"
-              alt="Lavasta Factory"
-              className="h-9 w-auto object-contain opacity-95 sm:h-10"
-              width={160}
-              height={65}
+              src="/logo-chatbullet.png"
+              alt="ChatBullet"
+              className="h-10 w-auto max-w-[min(100%,260px)] object-contain object-left sm:h-11"
+              width={260}
+              height={84}
             />
             <h1
               className="mt-3 text-[1.35rem] leading-tight text-balance sm:text-2xl"
-              style={{ fontFamily: '"Dela Gothic One", sans-serif', color: ink }}
+              style={{ fontFamily: '"Montserrat", "Roboto", sans-serif', fontWeight: 700, color: ink }}
             >
               Кабінет
             </h1>
@@ -169,9 +170,9 @@ export function HomePage() {
           <button
             type="button"
             onClick={logout}
-            className="group flex shrink-0 items-center gap-1.5 rounded-full border border-black/8 bg-white/80 px-3 py-1.5 text-xs font-semibold text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#fe8842]/40 hover:text-[#231f20]"
+            className="group flex shrink-0 items-center gap-1.5 rounded-full border border-slate-200/90 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur transition hover:border-[#66BFFF]/50 hover:text-[#1a1d21]"
           >
-            <IconLogout size={16} className="opacity-80 group-hover:text-[#fe8842]" />
+            <IconLogout size={16} className="opacity-80 group-hover:text-[#66BFFF]" />
             Вийти
           </button>
         </header>
@@ -225,7 +226,7 @@ export function HomePage() {
                   className={[
                     'group relative flex w-full flex-col items-start overflow-hidden rounded-2xl border p-4 text-left transition-all duration-200 sm:min-h-[120px]',
                     allowed
-                      ? 'border-[#e8e0d6] bg-white/85 shadow-[0_4px_24px_rgba(26,24,22,0.06)] backdrop-blur-md hover:-translate-y-0.5 hover:border-[#fe8842]/45 hover:shadow-[0_12px_32px_rgba(254,136,66,0.18)] active:translate-y-0'
+                      ? 'border-slate-200/90 bg-white shadow-[0_4px_24px_rgba(15,23,42,0.05)] backdrop-blur-md hover:-translate-y-0.5 hover:border-[#66BFFF]/50 hover:shadow-[0_12px_32px_rgba(102,191,255,0.22)] active:translate-y-0'
                       : 'cursor-not-allowed border-[#ebe6e0]/80 bg-[#f3efe8]/50 opacity-60 grayscale-[0.35]',
                   ].join(' ')}
                 >

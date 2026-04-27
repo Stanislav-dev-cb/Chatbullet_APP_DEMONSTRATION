@@ -12,7 +12,7 @@ import { useShift } from '../context/ShiftContext';
 
 const ink = '#1a1816';
 const thread = '#2c2a28';
-const orange = '#fe8842';
+const brand = '#66BFFF';
 
 function nowHHMM(): string {
   const d = new Date();
@@ -32,9 +32,9 @@ type TimePreset = 'now' | 'custom';
 function AdminBadge({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-50/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber-900/80"
+      className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/40 bg-sky-50/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-sky-900/85"
     >
-      <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-amber-500" aria-hidden />
+      <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-sky-400" aria-hidden />
       {children}
     </span>
   );
@@ -51,7 +51,7 @@ function ShiftSummaryCard({ shift }: { shift: StoredShift }) {
     >
       <div
         className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full opacity-40"
-        style={{ background: `radial-gradient(circle, ${orange} 0%, transparent 70%)` }}
+        style={{ background: `radial-gradient(circle, ${brand} 0%, transparent 70%)` }}
       />
       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6b6560]">Статус зміни</p>
       <ul className="mt-3 space-y-2.5 text-sm text-[#231f20]">
@@ -126,7 +126,7 @@ export function ShiftPage() {
 
   return (
     <div
-      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#231f20]"
+      className="relative min-h-dvh w-full flex flex-col overflow-x-hidden text-[#1a1d21]"
       style={{
         fontFamily: '"Roboto", system-ui, sans-serif',
         paddingTop: 'env(safe-area-inset-top, 0px)',
@@ -134,9 +134,9 @@ export function ShiftPage() {
         paddingLeft: 'env(safe-area-inset-left, 0px)',
         paddingRight: 'env(safe-area-inset-right, 0px)',
         background: `
-          radial-gradient(ellipse 100% 80% at 50% -20%, rgba(254, 136, 66, 0.28) 0%, transparent 50%),
-          radial-gradient(ellipse 60% 40% at 100% 100%, rgba(0, 160, 170, 0.15) 0%, transparent 50%),
-          #f2ebe3`,
+          radial-gradient(ellipse 100% 80% at 50% -20%, rgba(102, 191, 255, 0.2) 0%, transparent 50%),
+          radial-gradient(ellipse 60% 40% at 100% 100%, rgba(142, 212, 255, 0.12) 0%, transparent 50%),
+          #f6f9fc`,
       }}
     >
       <div
@@ -148,7 +148,7 @@ export function ShiftPage() {
         aria-hidden
       />
 
-      <div className="shift-aurora pointer-events-none absolute left-[10%] top-32 h-56 w-56 rounded-full bg-[#fe8842]/25 blur-3xl" />
+      <div className="shift-aurora pointer-events-none absolute left-[10%] top-32 h-56 w-56 rounded-full bg-[#66BFFF]/25 blur-3xl" />
       <div className="shift-aurora pointer-events-none absolute right-[5%] top-1/2 h-48 w-48 rounded-full bg-cyan-500/20 blur-3xl [animation-delay:1.2s]" />
 
       <div className="pointer-events-none absolute inset-0">
@@ -161,7 +161,7 @@ export function ShiftPage() {
           <path
             d="M0 40 Q50 0 100 40 T200 40"
             stroke="currentColor"
-            className="text-[#fe8842]"
+            className="text-[#66BFFF]"
             strokeWidth="1.2"
             strokeDasharray="4 6"
           />
@@ -172,7 +172,7 @@ export function ShiftPage() {
         <header className="mb-4 flex items-center gap-2">
           <Link
             to="/"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#fe8842]/50 hover:text-[#231f20]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#66BFFF]/50 hover:text-[#231f20]"
             aria-label="Назад до кабінету"
           >
             <IconArrowLeft size={20} stroke={1.75} />
@@ -184,7 +184,7 @@ export function ShiftPage() {
             >
               Робоча зміна
             </h1>
-            <p className="text-xs font-medium text-[#6b6560]">Lavasta Factory · фіксований облік часу</p>
+            <p className="text-xs font-medium text-[#6b6560]">ChatBullet · фіксований облік часу</p>
           </div>
         </header>
 
@@ -204,10 +204,10 @@ export function ShiftPage() {
 
         {view === 'main' && banner === 'end' && (
           <div
-            className="mb-4 flex items-start gap-2 rounded-2xl border border-[#fe8842]/30 bg-gradient-to-r from-amber-50/95 to-white/80 p-3.5 text-sm leading-snug text-[#3d2a10] shadow-sm"
+            className="mb-4 flex items-start gap-2 rounded-2xl border border-[#66BFFF]/35 bg-gradient-to-r from-sky-50/95 to-white/90 p-3.5 text-sm leading-snug text-sky-900 shadow-sm"
             role="status"
           >
-            <IconCheck size={20} className="mt-0.5 shrink-0 text-[#fe8842]" />
+            <IconCheck size={20} className="mt-0.5 shrink-0 text-[#66BFFF]" />
             <p>
               <span className="font-semibold">Зміну завершено. </span>
               Час здачі збережено. Адміністратор отримає запис і підтвердить зміни протягом
@@ -231,7 +231,7 @@ export function ShiftPage() {
               type="time"
               value={time}
               onChange={(e) => setTime(e.currentTarget.value)}
-              className="mt-1.5 w-full rounded-xl border border-[#d8ccc0] bg-white/90 px-3 py-3 text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#fe8842] focus:ring-2 focus:ring-[#fe8842]/20"
+              className="mt-1.5 w-full rounded-xl border border-[#d8ccc0] bg-white/90 px-3 py-3 text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#66BFFF] focus:ring-2 focus:ring-[#66BFFF]/20"
             />
             <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
               <button
@@ -270,7 +270,7 @@ export function ShiftPage() {
               type="time"
               value={time}
               onChange={(e) => setTime(e.currentTarget.value)}
-              className="mt-1.5 w-full rounded-xl border border-[#d8ccc0] bg-white/90 px-3 py-3 text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#fe8842] focus:ring-2 focus:ring-[#fe8842]/20"
+              className="mt-1.5 w-full rounded-xl border border-[#d8ccc0] bg-white/90 px-3 py-3 text-lg font-bold tabular-nums text-[#1a1816] shadow-inner outline-none focus:border-[#66BFFF] focus:ring-2 focus:ring-[#66BFFF]/20"
             />
             <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end">
               <button
@@ -294,12 +294,12 @@ export function ShiftPage() {
 
         {view === 'main' && !shift && (
           <div className="shift-hero glass-ring relative overflow-hidden rounded-3xl p-5 sm:p-6">
-            <div className="absolute right-0 top-0 h-32 w-32 translate-x-1/3 -translate-y-1/3 rounded-full bg-gradient-to-br from-white/20 to-[#fe8842]/20 blur-2xl" />
+            <div className="absolute right-0 top-0 h-32 w-32 translate-x-1/3 -translate-y-1/3 rounded-full bg-gradient-to-br from-white/20 to-[#66BFFF]/20 blur-2xl" />
             <div
               className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg"
               style={{
-                background: 'linear-gradient(135deg, #ff9a5c 0%, #fe8842 45%, #e86b2a 100%)',
-                boxShadow: '0 12px 40px rgba(254, 136, 66, 0.45)',
+                background: 'linear-gradient(135deg, #8ED4FF 0%, #66BFFF 45%, #4AA3E8 100%)',
+                boxShadow: '0 12px 40px rgba(102, 191, 255, 0.4)',
               }}
             >
               <IconClockHour4 size={32} stroke={1.5} />
@@ -311,7 +311,7 @@ export function ShiftPage() {
               <button
                 type="button"
                 onClick={() => openFormStart('custom')}
-                className="shift-btn-ghost w-full rounded-2xl border-2 border-[#e0d2c2] bg-white/60 px-4 py-3.5 text-left text-sm font-bold text-[#231f20] transition hover:border-[#fe8842]/50 hover:bg-white"
+                className="shift-btn-ghost w-full rounded-2xl border-2 border-[#e0d2c2] bg-white/60 px-4 py-3.5 text-left text-sm font-bold text-[#231f20] transition hover:border-[#66BFFF]/50 hover:bg-white"
               >
                 Зміну розпочато раніше
                 <span className="mt-0.5 block text-xs font-normal text-[#6b6560]">
@@ -343,7 +343,7 @@ export function ShiftPage() {
               <button
                 type="button"
                 onClick={() => openFormEnd('custom')}
-                className="shift-btn-ghost w-full rounded-2xl border-2 border-[#e0d2c2] bg-white/60 px-4 py-3.5 text-left text-sm font-bold text-[#231f20] transition hover:border-[#fe8842]/50 hover:bg-white"
+                className="shift-btn-ghost w-full rounded-2xl border-2 border-[#e0d2c2] bg-white/60 px-4 py-3.5 text-left text-sm font-bold text-[#231f20] transition hover:border-[#66BFFF]/50 hover:bg-white"
               >
                 Зміну завершено раніше
                 <span className="mt-0.5 block text-xs font-normal text-[#6b6560]">
@@ -404,15 +404,15 @@ export function ShiftPage() {
           inset: 0;
           border-radius: 1.5rem;
           padding: 1px;
-          background: linear-gradient(135deg, rgba(254, 136, 66, 0.45), rgba(0, 180, 190, 0.25), rgba(255, 255, 255, 0.2));
+          background: linear-gradient(135deg, rgba(102, 191, 255, 0.35), rgba(142, 212, 255, 0.2), rgba(255, 255, 255, 0.25));
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
           pointer-events: none;
         }
         .shift-btn-primary {
-          background: linear-gradient(135deg, #ff9a5c 0%, #fe8842 40%, #e86b2a 100%);
-          box-shadow: 0 10px 32px rgba(254, 136, 66, 0.42);
+          background: linear-gradient(135deg, #8ED4FF 0%, #66BFFF 40%, #4AA3E8 100%);
+          box-shadow: 0 10px 32px rgba(102, 191, 255, 0.38);
         }
         .shift-btn-primary:hover {
           filter: brightness(1.04);

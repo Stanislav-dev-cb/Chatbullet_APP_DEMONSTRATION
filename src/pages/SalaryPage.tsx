@@ -64,7 +64,7 @@ export function SalaryPage() {
         paddingLeft: 'env(safe-area-inset-left, 0px)',
         paddingRight: 'env(safe-area-inset-right, 0px)',
         background:
-          'radial-gradient(100% 70% at 50% 0%, rgba(254,136,66,0.2) 0%, transparent 50%),' +
+          'radial-gradient(100% 70% at 50% 0%, rgba(102,191,255,0.14) 0%, transparent 50%),' +
           'radial-gradient(80% 50% at 100% 80%, rgba(0, 140, 150, 0.1) 0%, transparent 45%),' +
           '#f0e8de',
       }}
@@ -77,13 +77,13 @@ export function SalaryPage() {
         }}
       />
 
-      <div className="pointer-events-none absolute left-1/2 top-24 h-48 w-48 -translate-x-1/2 rounded-full bg-[#fe8842]/20 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-24 h-48 w-48 -translate-x-1/2 rounded-full bg-[#66BFFF]/20 blur-3xl" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-md flex-1 flex-col px-4 pb-10 pt-4 sm:px-6">
         <header className="mb-5 flex items-center gap-2">
           <Link
             to="/"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#fe8842]/50 hover:text-[#231f20]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/8 bg-white/90 text-[#5c5856] shadow-sm backdrop-blur transition hover:border-[#66BFFF]/50 hover:text-[#231f20]"
             aria-label="Назад до кабінету"
           >
             <IconArrowLeft size={20} stroke={1.75} />
@@ -113,7 +113,7 @@ export function SalaryPage() {
             style={{ boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.6)' }}
           >
             <div
-              className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#fe8842]/15"
+              className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#66BFFF]/15"
               aria-hidden
             />
             <div className="relative flex items-start justify-between gap-3">
@@ -123,14 +123,14 @@ export function SalaryPage() {
                 </p>
                 <p className="mt-1 flex items-baseline gap-1.5 text-3xl font-bold tabular-nums sm:text-4xl" style={{ color: ink }}>
                   {formatUah(total)}
-                  <span className="text-lg font-semibold text-[#fe8842]">₴</span>
+                  <span className="text-lg font-semibold text-[#66BFFF]">₴</span>
                 </p>
                 <p className="mt-1.5 text-xs text-[#6b6560]">
                   Наробіток за зміни на лініях шиття та контролю якості
                 </p>
               </div>
               <div
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#fe8842]/30 bg-white/60 text-[#fe8842] shadow-sm"
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#66BFFF]/30 bg-white/60 text-[#66BFFF] shadow-sm"
                 aria-hidden
               >
                 <IconPackage size={30} stroke={1.5} />
@@ -172,7 +172,7 @@ export function SalaryPage() {
               className="flex items-center justify-between gap-3 rounded-xl border border-[#e0d6c8] bg-white/70 px-3 py-2.5 shadow-sm backdrop-blur-sm"
             >
               <div className="flex min-w-0 items-center gap-2.5">
-                <row.i size={20} className="shrink-0 text-[#fe8842]" stroke={1.6} />
+                <row.i size={20} className="shrink-0 text-[#66BFFF]" stroke={1.6} />
                 <div>
                   <p className="text-sm font-semibold" style={{ color: ink }}>{row.t}</p>
                   <p className="text-[11px] text-[#6b6560]">{row.d}</p>
